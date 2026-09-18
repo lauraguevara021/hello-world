@@ -1,12 +1,519 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello, world! Welcome to my first webpage.</h1>
-    <p>This page was made by Laura Catalina Guevara Lemus.</p>
-    <p>I made this page while learning how to use GitHub Pages.</p>
-    <p>This page is part of my Honors course exploring the relationship between humans and technology in an increasingly technological world.</p>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Laura's Hello World</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fffaf7;
+      color: #4b3434;
+      line-height: 1.6;
+    }
+
+    /* ---------- TOP BAR ---------- */
+
+    .navbar {
+      background-color: #f8dfe4;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #efd1d6;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 25px;
+      color: #c96f86;
+    }
+
+    .navbar-text {
+      color: #8a5a62;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+
+    /* ---------- MAIN SECTION ---------- */
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 30px 45px;
+
+      display: flex;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .hello {
+      color: #d98298;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 52px;
+      line-height: 1.08;
+      margin: 10px 0 25px;
+      color: #4b3034;
+    }
+
+    p {
+      font-size: 17px;
+      margin: 13px 0;
+    }
+
+
+    /* ---------- TAGS ---------- */
+
+    .tags {
+      margin-top: 28px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #f7dce2;
+      color: #87515d;
+
+      padding: 8px 15px;
+      margin: 5px 5px 5px 0;
+
+      border-radius: 25px;
+      font-size: 13px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 550px;
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 12px 30px rgba(100, 70, 70, 0.15);
+
+      transition: transform 0.3s ease;
+    }
+
+    .image img:hover {
+      transform: scale(1.02);
+    }
+
+
+    /* ---------- QUOTE ---------- */
+
+    .quote {
+      max-width: 900px;
+      margin: 25px auto 60px;
+
+      text-align: center;
+
+      padding: 35px;
+
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 27px;
+
+      color: #cf758c;
+    }
+
+
+    /* ---------- COURSE CONNECTION ---------- */
+
+    .course-section {
+      max-width: 1000px;
+      margin: 0 auto 55px;
+
+      background-color: #fdf0ec;
+
+      padding: 35px 45px;
+
+      border-radius: 25px;
+    }
+
+    .course-section h2 {
+      font-family: Georgia, serif;
+      text-align: center;
+      color: #87515d;
+
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .course-section p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+
+    /* ---------- THREE CONCEPTS ---------- */
+
+    .concepts {
+      max-width: 1000px;
+      margin: auto;
+
+      padding: 45px 20px;
+
+      border-top: 1px solid #efd6d8;
+      border-bottom: 1px solid #efd6d8;
+
+      display: flex;
+      justify-content: space-around;
+
+      text-align: center;
+      gap: 35px;
+    }
+
+    .concept {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .concept .icon {
+      font-size: 30px;
+      color: #cf758c;
+    }
+
+    .concept h3 {
+      font-family: Georgia, serif;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      color: #87515d;
+
+      margin: 8px 0;
+
+      font-size: 15px;
+    }
+
+    .concept p {
+      font-size: 14px;
+    }
+
+
+    /* ---------- PERSONAL TOUCH ---------- */
+
+    .personal {
+      max-width: 900px;
+      margin: 60px auto;
+
+      text-align: center;
+
+      padding: 35px;
+
+      background-color: #f8dfe4;
+
+      border-radius: 25px;
+    }
+
+    .personal h2 {
+      font-family: Georgia, serif;
+      color: #87515d;
+      margin-top: 0;
+    }
+
+    .personal p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      text-align: center;
+
+      padding: 30px;
+
+      background-color: #f8dfe4;
+
+      color: #87515d;
+
+      font-size: 13px;
+
+      margin-top: 30px;
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        flex-direction: column;
+        padding-top: 45px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .concepts {
+        flex-direction: column;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .course-section,
+      .personal {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="navbar">
+
+    <div class="logo">
+      Laura Guevara ♡
+    </div>
+
+    <div class="navbar-text">
+      HUMANS × TECHNOLOGY
+    </div>
+
+  </div>
+
+
+
+  <!-- MAIN INTRODUCTION -->
+
+  <section class="hero">
+
+
+    <div class="text">
+
+      <div class="hello">
+        Hello, world!
+      </div>
+
+      <h1>
+        Welcome to my first webpage.
+      </h1>
+
+      <p>
+        This page was made by Laura Catalina Guevara Lemus.
+      </p>
+
+      <p>
+        I made this page while learning how to use GitHub Pages.
+      </p>
+
+      <p>
+        This page is part of my Honors course exploring the relationship
+        between humans and technology in an increasingly technological world.
+      </p>
+
+
+      <div class="tags">
+
+        <span class="tag">
+          Technology
+        </span>
+
+        <span class="tag">
+          Humanity
+        </span>
+
+        <span class="tag">
+          Creativity
+        </span>
+
+        <span class="tag">
+          Engineering
+        </span>
+
+        <span class="tag">
+          Artificial Intelligence
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- OUR IMAGE -->
+
+    <div class="image">
+
+      <img
+        src="honors-seminar-first-image.png"
+        alt="Pastel illustration connecting humans, technology, coding and electrical engineering">
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- QUOTE -->
+
+  <div class="quote">
+
+    “Technology shapes our world, but people give it purpose.” ♡
+
+  </div>
+
+
+
+  <!-- COURSE CONNECTION -->
+
+  <section class="course-section">
+
+    <h2>
+      Humans × Technology
+    </h2>
+
+    <p>
+      My Honors course explores the complex relationship between humans
+      and technology, from historical technological developments to
+      contemporary topics such as artificial intelligence, machine learning,
+      ethics, and the boundaries between human and machine intelligence.
+    </p>
+
+  </section>
+
+
+
+  <!-- THREE IDEAS -->
+
+  <section class="concepts">
+
+
+    <div class="concept">
+
+      <div class="icon">
+        ♡
+      </div>
+
+      <h3>
+        Humanity
+      </h3>
+
+      <p>
+        Exploring what it means to be human in an increasingly
+        technological world.
+      </p>
+
+    </div>
+
+
+
+    <div class="concept">
+
+      <div class="icon">
+        &lt;/&gt;
+      </div>
+
+      <h3>
+        Technology
+      </h3>
+
+      <p>
+        Learning how technology develops, spreads, and transforms
+        the way people live and think.
+      </p>
+
+    </div>
+
+
+
+    <div class="concept">
+
+      <div class="icon">
+        ⚡
+      </div>
+
+      <h3>
+        Engineering
+      </h3>
+
+      <p>
+        Connecting my Electrical Engineering major with creativity,
+        innovation, coding, and emerging technologies.
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- PERSONAL CONNECTION -->
+
+  <section class="personal">
+
+    <h2>
+      A little piece of me ♡
+    </h2>
+
+    <p>
+      As an Electrical Engineering student, I am especially interested
+      in the point where technology, creativity, and people meet.
+      Building this webpage is a small first step in exploring that
+      relationship through code.
+    </p>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    Made with curiosity, code & a little pink ♡
+
+    <br>
+
+    Laura Catalina Guevara Lemus
+
+  </footer>
+
+
+</body>
+
 </html>
